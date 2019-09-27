@@ -58,4 +58,8 @@ RCT_EXPORT_METHOD(initialize) {
     [self.bridge.eventDispatcher sendDeviceEventWithName:@"centralManagerDidUpdateState" body:stateName];
 }
 
++ (BOOL)requiresMainQueueSetup {
+  return YES;
+}
+
 @end
